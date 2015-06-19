@@ -42,8 +42,8 @@ public class RedeDePetri {
     
     public void inicializarMatriz(int[][] mat) {
         for (int i = 0; i < MAXTAM; i++) {
-            for (int j = 1; j < MAXTAM; i++) {
-                matrizPeso[i][j] = -1;
+            for (int j = 0; j < MAXTAM; j++) {
+                mat[i][j] = -1;
             }
         }
     }
@@ -51,6 +51,7 @@ public class RedeDePetri {
     public void inserirLugar(String lugar) {
         indiceLugar.put(lugar, vertices.size());
         vertices.add(lugar);
+        tipos.add(TIPO_LUGAR);
     }
     
     public void inserirLugares(String []lugares) {
@@ -62,6 +63,7 @@ public class RedeDePetri {
     public void inserirTransicao(String transicao) {
         indiceTransicao.put(transicao, vertices.size());
         vertices.add(transicao);
+        tipos.add(TIPO_TRANSICAO);
     }
     
     public void inserirTransicoes(String []transicoes) {
@@ -104,7 +106,7 @@ public class RedeDePetri {
                 res += " " + vertices.get(i);
             }
         }
-        res += "\n";
+        res += "\n\n";
         res += "Arestas de lugares para transições:\n";
         for (i=0; i<vertices.size(); i++) {
             if (tipos.get(i)==TIPO_LUGAR) {
