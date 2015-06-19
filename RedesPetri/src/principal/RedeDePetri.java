@@ -4,6 +4,7 @@ package principal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,8 +17,8 @@ public class RedeDePetri {
     private final int TIPO_LUGAR = 1;
     private final int TIPO_TRANSICAO = 2;
 
-    private ArrayList<String> vertices;
-    private ArrayList<Integer> tipos;
+    private List<String> vertices;
+    private List<Integer> tipos;
     private Map<String, Integer> indiceLugar;
     private Map<String, Integer> indiceTransicao;
     private int[][] matrizPeso;
@@ -88,6 +89,7 @@ public class RedeDePetri {
         grauEntrada [b] += peso;
     }
     
+    @Override
     public String toString() {
         int i, j;
         String lugar, transicao;
