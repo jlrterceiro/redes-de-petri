@@ -52,10 +52,22 @@ public class RedeDePetri {
         indiceLugar.put(lugar, vertices.size());
         vertices.add(lugar);
     }
-
+    
+    public void inserirLugares(String []lugares) {
+        for (String lugar : lugares) {
+            inserirLugar(lugar);
+        }
+    }
+   
     public void inserirTransicao(String transicao) {
         indiceTransicao.put(transicao, vertices.size());
         vertices.add(transicao);
+    }
+    
+    public void inserirTransicoes(String []transicoes) {
+        for (String transicao : transicoes) {
+            inserirTransicao(transicao);
+        }
     }
     
     public void inserirArestaLugarTransicao(String lugar, String transicao, int peso) {
