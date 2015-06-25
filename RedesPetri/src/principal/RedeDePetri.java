@@ -21,6 +21,7 @@ public class RedeDePetri {
     private List<Integer> tipos;
     private Map<String, Integer> indiceLugar;
     private Map<String, Integer> indiceTransicao;
+    private List<Integer> listaLugares;
     private int[][] matrizPeso;
     private int[] grauEntrada;
 
@@ -28,7 +29,8 @@ public class RedeDePetri {
         vertices = new ArrayList<>();
         tipos = new ArrayList<>();
         indiceLugar = new HashMap<>();
-        indiceTransicao = new HashMap<>();;
+        indiceTransicao = new HashMap<>();
+        listaLugares = new ArrayList<>();
         matrizPeso = new int[MAXTAM][MAXTAM];
         grauEntrada = new int[MAXTAM];
         inicializarMatriz(matrizPeso);
@@ -50,9 +52,11 @@ public class RedeDePetri {
     }
 
     public void inserirLugar(String lugar) {
+        listaLugares.add(vertices.size());
         indiceLugar.put(lugar, vertices.size());
         vertices.add(lugar);
         tipos.add(TIPO_LUGAR);
+        
     }
     
     public void inserirLugares(String []lugares) {
