@@ -104,6 +104,15 @@ public class RedeDePetri {
         b = indiceLugar.get(lugar);
         adjTransicao[a][b] = peso;
     }
+    
+    public void inserirArestaQualquer(String origem, String destino, int peso) {
+        if (indiceLugar.containsKey(origem) && indiceTransicao.containsKey(destino)) {
+            inserirArestaLugarTransicao(origem, destino, peso);
+        }
+        else if (indiceTransicao.containsKey(origem) && indiceLugar.containsKey(destino)) {
+            inserirArestaTransicaoLugar(origem, destino, peso);
+        }
+    }
 
     public String toString() {
         int i, j;

@@ -88,7 +88,7 @@ public class DesenhoRedeDePetri extends JFrame {
                 }
                 if (rede.getAdjTransicao()[j][i]!=-1) {
                     u=verticesTransicoes.get(j);
-                    v=verticesLugares.get(j);
+                    v=verticesLugares.get(i);
                     peso=rede.getAdjTransicao()[j][i];
                     graph.insertEdge(v, null, "" + peso, u, v);
                 }

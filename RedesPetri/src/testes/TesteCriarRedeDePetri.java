@@ -13,7 +13,7 @@ import principal.RedeDePetri;
 public class TesteCriarRedeDePetri {
    
     public static void main(String []args) {
-        testeRede2();
+        testeRede1();
     }
     
     public static void testeRede1() {
@@ -37,6 +37,8 @@ public class TesteCriarRedeDePetri {
         x.add(0);
         ArvoreDeCobertura arvore = rede.arvoreDeCobertura(x);
         System.out.println(arvore);
+        System.out.println("\n\nlargura maxima: " + arvore.larguraMaxima());
+        System.out.println("\n\n" + arvore.listaLarguras());
     }
     
     public static void testeRede2() {
@@ -59,8 +61,11 @@ public class TesteCriarRedeDePetri {
         x.add(0);
         x.add(0);
         x.add(0);
+        System.out.println(rede+"\n\n");
         ArvoreDeCobertura arvore = rede.arvoreDeCobertura(x);
         System.out.println(arvore);
+        System.out.println("\n\nlargura maxima: " + arvore.larguraMaxima());
+        System.out.println("\n\n" + arvore.listaLarguras());
     }
     
     public static void testeRede3() {
@@ -103,6 +108,8 @@ public class TesteCriarRedeDePetri {
         x.add(1);
         ArvoreDeCobertura arvore = rede.arvoreDeCobertura(x);
         System.out.println(arvore);
+        System.out.println("\n\nlargura maxima: " + arvore.larguraMaxima());
+        System.out.println("\n\n" + arvore.listaLarguras());
     }
     
     public static void testeRede4() {
@@ -129,6 +136,8 @@ public class TesteCriarRedeDePetri {
         x.add(0);
         ArvoreDeCobertura arvore = rede.arvoreDeCobertura(x);
         System.out.println(arvore);
+        System.out.println("\n\nlargura maxima: " + arvore.larguraMaxima());
+        System.out.println("\n\n" + arvore.listaLarguras());
     }
     
 }

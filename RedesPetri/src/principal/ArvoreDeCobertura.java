@@ -6,7 +6,11 @@
 package principal;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 
 public class ArvoreDeCobertura {
     
@@ -80,6 +84,42 @@ public class ArvoreDeCobertura {
         return res;
     }
     
+    public List<Integer> listaLarguras() {
+        List<Integer> larguras = new ArrayList<>();
+        Queue<ArvoreDeCobertura> filaArvore = new LinkedList<>();
+        Queue<Integer> filaNivel = new LinkedList<>();
+        filaArvore.add(this);
+        filaNivel.add(0);
+        while (filaArvore.size()>0) {
+            ArvoreDeCobertura arvore;
+            int nivel;
+            arvore = filaArvore.poll();
+            nivel = filaNivel.poll();
+            if (nivel>=larguras.size()) {
+                larguras.add(0);
+            }
+            larguras.set(nivel, larguras.get(nivel)+1);
+            int i;
+            for (i=0; i<arvore.getFilhos().size(); i++) {
+                filaArvore.add(arvore.getFilhos().get(i));
+                filaNivel.add(nivel+1);
+            }
+        }
+        return larguras;
+    }
+    
+    public int larguraMaxima() {
+        int maior=0;
+        int i;
+        List<Integer> larguras = listaLarguras();
+        for (i=0; i<larguras.size(); i++) {
+            if (larguras.get(i)>maior) {
+                maior = larguras.get(i);
+            }
+        }
+        return maior;
+    }
+    
     public String toString(int espaco) {
         int i;
         String res = "";
@@ -93,6 +133,7 @@ public class ArvoreDeCobertura {
         }
         return res;
     }
+    
     
     
     
