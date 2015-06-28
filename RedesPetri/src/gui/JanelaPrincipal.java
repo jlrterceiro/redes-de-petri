@@ -5,10 +5,6 @@
  */
 package gui;
 
-/**
- *
- * @author JoséLuís
- */
 public class JanelaPrincipal extends javax.swing.JFrame {
 
     /**

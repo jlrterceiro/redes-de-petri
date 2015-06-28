@@ -15,10 +15,6 @@ import java.util.List;
 import javax.swing.JFrame;
 import principal.RedeDePetri;
 
-/**
- *
- * @author JoséLuís
- */
 public class DesenhoRedeDePetri extends JFrame {
 
     private RedeDePetri rede;

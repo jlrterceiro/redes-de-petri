@@ -8,10 +8,6 @@ package principal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author JoséLuís
- */
 public class ArvoreDeCobertura {
     
     public static final String NO_INTERNO = "";

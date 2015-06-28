@@ -10,10 +10,6 @@ import java.util.List;
 import principal.ArvoreDeCobertura;
 import principal.RedeDePetri;
 
-/**
- *
- * @author JoséLuís
- */
 public class TesteCriarRedeDePetri {
    
     public static void main(String []args) {

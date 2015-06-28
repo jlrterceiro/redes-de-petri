@@ -9,10 +9,6 @@ import javax.swing.JFrame;
 import gui.DesenhoRedeDePetri;
 import principal.RedeDePetri;
 
-/**
- *
- * @author JoséLuís
- */
 public class TesteVizualizacaoRedeDePetri {
     
     public static void main(String []args) {

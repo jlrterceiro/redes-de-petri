@@ -9,10 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- *
- * @author SebastiaoGaleno
- */
 public class RedeDePetri {
 
     private final int MAX_LUGARES = 100;

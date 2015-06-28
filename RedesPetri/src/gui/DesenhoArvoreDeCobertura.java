@@ -10,10 +10,6 @@ import com.mxgraph.view.mxGraph;
 import javax.swing.JFrame;
 import principal.RedeDePetri;
 
-/**
- *
- * @author JoséLuís
- */
 public class DesenhoArvoreDeCobertura extends JFrame {
     
     private RedeDePetri rede;
